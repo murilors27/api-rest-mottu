@@ -137,7 +137,7 @@ A interface web foi desenvolvida para uso administrativo e segue a identidade vi
 A aplicação está hospedada no **Render**, com acesso público.  
 O app mobile consome diretamente o endpoint do serviço online.
 
-**URL do Deploy:** [em breve]  
+**URL do Deploy:** [[deploy](https://api-rest-mottu.onrender.com)]  
 **Swagger (documentação REST):** `/swagger-ui/index.html`
 
 **Usuários de teste:**

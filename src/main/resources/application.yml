@@ -3,9 +3,9 @@ spring:
     name: rastreamento
 
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/mottu}
-    username: ${SPRING_DATASOURCE_USERNAME:mottu}
-    password: ${SPRING_DATASOURCE_PASSWORD:NovaSenha123!}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://dpg-d488ge3uibrs7393pohg-a.oregon-postgres.render.com/mottu_db_naym}
+    username: ${SPRING_DATASOURCE_USERNAME:mottu_db_naym_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:CCB3N57cTCC9yMSjgJFqRVSxLXgCJXPi}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -22,9 +22,9 @@ spring:
   flyway:
     enabled: ${SPRING_FLYWAY_ENABLED:true}
     locations: classpath:db/migration
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/mottu}
-    user: ${SPRING_DATASOURCE_USERNAME:mottu}
-    password: ${SPRING_DATASOURCE_PASSWORD:NovaSenha123!}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://dpg-d488ge3uibrs7393pohg-a.oregon-postgres.render.com/mottu_db_naym}
+    user: ${SPRING_DATASOURCE_USERNAME:mottu_db_naym_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:CCB3N57cTCC9yMSjgJFqRVSxLXgCJXPi}
     validate-on-migrate: false
     baseline-on-migrate: ${SPRING_FLYWAY_BASELINE_ON_MIGRATE:true}
 

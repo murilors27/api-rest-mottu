@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . .
 
 #Compila o projeto e gera o JAR
-RUN mvn clean package -Dskiptests
+RUN mvn clean package -DskipTests
 
 #Selecionado imagem mais leve para rodar o projeto java
 FROM eclipse-temurin:17-jdk-jammy

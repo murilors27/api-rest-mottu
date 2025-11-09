@@ -220,7 +220,7 @@ spring:
 ## 📱 Integração com o App Mobile
 
 ### Repositório:
-🔗 [Mottu Tracker Mobile (GitHub)](https://github.com/murilors27/mottu-tracker-mobile)
+🔗 [Mottu Tracker Mobile (GitHub)](https://github.com/murilors27/api-rest-mottu)
 
 ### Instalação:
 ```

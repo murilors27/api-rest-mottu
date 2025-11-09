@@ -21,5 +21,7 @@ public class MotoDTO {
     @NotNull(message = "SensorId é obrigatório")
     private Long sensorId;
 
+    private String sensorLocalizacao;
+
     private StatusMoto status;
 }

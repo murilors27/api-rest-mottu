@@ -33,4 +33,7 @@ public class Moto {
     @ManyToOne
     @JoinColumn(name = "sensor_id")
     private SensorUWB sensor;
+
+    @Column(nullable = false)
+    private boolean ativo = true;
 }

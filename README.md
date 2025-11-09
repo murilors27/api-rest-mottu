@@ -1,3 +1,13 @@
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Logo_FIAP.png" width="200">
+</p>
+
+<h3 align="center">Global Solution — Sprint 3</h3>
+<p align="center">Projeto desenvolvido como parte da disciplina de Java Advanced (FIAP 2025)</p>
+
+---
+
+
 # 🏍️ Rastreamento de Motos com UWB — API Java Spring Boot
 
 Aplicação Web completa desenvolvida em Spring Boot, com foco em Thymeleaf (frontend), Flyway (versionamento do banco) e Spring Security (autenticação e autorização).
@@ -178,6 +188,21 @@ Criar Sensor
 ```
 
 ---
+
+## 🎥 Apresentação e Demonstração
+
+📌 **Pitch e Demonstração Técnica**
+
+- O vídeo de apresentação demonstra o funcionamento completo da aplicação, incluindo:
+  - Login com usuários ADMIN e USER
+  - CRUDs de motos e sensores com Thymeleaf
+  - Controle de acesso e autenticação
+  - Operações de alocação e manutenção
+
+🔗 *Link para o vídeo de apresentação*: [em breve]
+
+---
+
 
 ## 👥 Equipe
 

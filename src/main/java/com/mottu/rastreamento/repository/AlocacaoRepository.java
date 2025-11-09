@@ -9,4 +9,5 @@ import java.util.List;
 public interface AlocacaoRepository extends JpaRepository<Alocacao, Long> {
     boolean existsByMotoIdAndFimIsNull(Long motoId);
     List<Alocacao> findByStatus(StatusAlocacao status);
+    List<Alocacao> findByMotoId(Long motoId);
 }

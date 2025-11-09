@@ -34,7 +34,9 @@ public class SensorUWBController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<SensorDTO> atualizar(@PathVariable Long id, @Valid @RequestBody SensorDTO dto) {
+    public ResponseEntity<SensorDTO> atualizar(
+            @PathVariable Long id,
+            @Valid @RequestBody SensorDTO dto) {  // precisa do @Valid
         return ResponseEntity.ok(service.atualizar(id, dto));
     }
 

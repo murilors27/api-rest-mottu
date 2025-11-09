@@ -33,23 +33,39 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrf -> csrf.disable())
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/api/**").disable())
+                .cors(cors -> {})
+
                 .authorizeHttpRequests(auth -> auth
 
+                        .requestMatchers("/css/**", "/images/**", "/js/**", "/webjars/**").permitAll()
+                        .requestMatchers("/login", "/logout").permitAll()
+
+                        .requestMatchers(HttpMethod.GET, "/api/**").hasAnyRole("USER","ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/api/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/**").hasRole("ADMIN")
+
                         .requestMatchers("/admin/**").hasRole("ADMIN")
-
-                        .requestMatchers(HttpMethod.GET, "/motos/**", "/sensores/**").hasAnyRole("ADMIN", "USER")
-
-                        .requestMatchers(HttpMethod.POST, "/motos/**", "/sensores/**").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.PUT, "/motos/**", "/sensores/**").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.DELETE, "/motos/**", "/sensores/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/motos/**", "/sensores/**", "/alocacoes/**", "/manutencoes/**")
+                        .hasAnyRole("USER","ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/motos/**", "/sensores/**", "/alocacoes/**", "/manutencoes/**")
+                        .hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/motos/**", "/sensores/**", "/alocacoes/**", "/manutencoes/**")
+                        .hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/motos/**", "/sensores/**", "/alocacoes/**", "/manutencoes/**")
+                        .hasRole("ADMIN")
 
                         .anyRequest().authenticated()
                 )
+
                 .formLogin(form -> form
                         .loginPage("/login").permitAll()
                         .defaultSuccessUrl("/motos", true)
                 )
+
+                .httpBasic(httpBasic -> {})
+
                 .logout(logout -> logout
                         .logoutUrl("/logout")
                         .logoutSuccessUrl("/login?logout").permitAll()

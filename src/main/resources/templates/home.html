@@ -4,13 +4,69 @@
 <body>
 <div th:replace="~{fragments/_navbar :: navbar}"></div>
 
-<div style="text-align: center; margin-top: 60px;">
-    <h1 style="color: #333;">Bem-vindo ao Sistema de Rastreamento</h1>
-    <p style="font-size: 16px; color: #555;">Usuário logado com sucesso.</p>
-    <a th:href="@{/logout}"
-       style="display:inline-block; margin-top:20px; padding:10px 20px; background:#007bff; color:#fff; text-decoration:none; border-radius:5px;">
-        Sair
-    </a>
+<div class="card-dark" style="max-width:900px; text-align:justify; line-height:1.6;">
+    <h1>Mottu Tracker — Controle Inteligente de Frotas</h1>
+
+    <p>
+        O <strong>Mottu Tracker</strong> é um sistema web desenvolvido para gerenciar e rastrear motos da Mottu com
+        <strong>tecnologia UWB (Ultra Wideband)</strong>.
+        Seu objetivo é proporcionar <strong>controle, precisão e agilidade</strong> na administração da frota, desde o pátio até o campo.
+    </p>
+
+    <h2>O que é o sistema</h2>
+    <p>
+        Cada moto cadastrada na plataforma possui um identificador UWB vinculado a um sensor, que permite o rastreamento em tempo real.
+        O sistema organiza todas as etapas operacionais — desde o cadastro até manutenções —
+        em um ambiente simples e seguro, acessível por administradores e usuários da empresa.
+    </p>
+
+    <h2>Principais funcionalidades</h2>
+    <ul style="list-style:none; padding:0;">
+        <li> <strong>Cadastro e controle de motos</strong> — mantenha o inventário completo e atualizado.</li>
+        <li> <strong>Gestão de sensores UWB</strong> — cada sensor é mapeado e vinculado a uma moto.</li>
+        <li> <strong>Alocações automáticas</strong> — controle de uso e disponibilidade das motos em tempo real.</li>
+        <li> <strong>Manutenções organizadas</strong> — registre e acompanhe o histórico completo de reparos.</li>
+        <li> <strong>Autenticação e perfis de acesso</strong> — segurança com perfis ADMIN e USER, via Spring Security.</li>
+        <li> <strong>Banco de dados versionado</strong> — Flyway garante integridade e rastreabilidade das migrações.</li>
+    </ul>
+
+    <h2>Perfis de usuário</h2>
+    <div style="margin-top:10px;">
+        <p><strong>Administrador:</strong> possui acesso total — cadastra, edita e exclui motos, sensores, alocações e manutenções.</p>
+        <p><strong>Usuário comum:</strong> pode visualizar informações, acompanhar status e consultar registros, mas sem alterar dados.</p>
+    </div>
+
+    <h2>Benefícios</h2>
+    <p>
+        Com o Mottu Tracker, a empresa ganha <strong>controle operacional em tempo real</strong>,
+        reduz o risco de erros manuais e melhora a eficiência do uso da frota.
+        A interface foi desenhada para ser <strong>direta, moderna e responsiva</strong>, mantendo a identidade visual da Mottu.
+    </p>
+
+    <h2>Tecnologias utilizadas</h2>
+    <ul style="columns:2; list-style:none; padding:0; margin-top:10px;">
+        <li>Java 17</li>
+        <li>Spring Boot 3.4</li>
+        <li>Spring Data JPA</li>
+        <li>Spring Security</li>
+        <li>Thymeleaf + Extras</li>
+        <li>PostgreSQL</li>
+        <li>Flyway</li>
+        <li>Maven</li>
+    </ul>
+
+    <h2>Sobre o projeto</h2>
+    <p>
+        Este sistema foi desenvolvido como parte da <strong>Global Solution FIAP</strong>,
+        integrando disciplinas de <em>Java Development, Web Engineering, Banco de Dados e UX</em>.
+        Todo o código é de autoria da equipe acadêmica, priorizando <strong>boas práticas de programação</strong>
+        e arquitetura limpa conforme princípios <em>SOLID</em> e <em>DRY</em>.
+    </p>
+
+    <p style="margin-top:25px; color:#aaa; text-align:center;">
+        © 2025 — Projeto acadêmico FIAP | Desenvolvido por Murilo Ribeiro Santos e equipe.
+        <br/>Powered by Spring Boot • PostgreSQL • Thymeleaf
+    </p>
 </div>
 
 <div th:replace="~{fragments/_footer :: footer}"></div>

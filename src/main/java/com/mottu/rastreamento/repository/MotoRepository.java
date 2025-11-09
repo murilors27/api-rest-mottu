@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface MotoRepository extends JpaRepository<Moto, Long> {
     Optional<Moto> findByIdentificadorUWB(String identificadorUWB);
     List<Moto> findBySensorId(Long sensorId);
+    List<Moto> findByAtivoTrue();
 }

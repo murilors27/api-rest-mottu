@@ -5,6 +5,6 @@ CREATE TABLE motos (
     cor VARCHAR(50) NOT NULL,
     status VARCHAR(20) NOT NULL,
     sensor_id BIGINT,
-    ativo BOOLEAN NOT NULL DEFAULT TRUE
+    ativo BOOLEAN NOT NULL DEFAULT TRUE,
     CONSTRAINT fk_sensor FOREIGN KEY (sensor_id) REFERENCES sensores(id)
 );
